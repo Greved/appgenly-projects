@@ -16,6 +16,7 @@
 
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
 }
 
 @keyframes float {
@@ -29,4 +30,10 @@
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+/* Form focus states */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
