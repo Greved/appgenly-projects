@@ -1,22 +1,31 @@
-export function Index() {
-  return (
-    <main className="mx-auto max-w-3xl p-8">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold">Modern Landing Page</h1>
-        <p className="mt-3 text-gray-600">A clean, modern starting point with Tailwind CSS.</p>
-      </header>
-      <section className="grid gap-6 sm:grid-cols-2">
-        <div className="rounded-lg border p-6">
-          <h2 className="text-xl font-semibold">Fast</h2>
-          <p className="mt-2 text-gray-600">Powered by React and Vite for a speedy DX.</p>
-        </div>
-        <div className="rounded-lg border p-6">
-          <h2 className="text-xl font-semibold">Responsive</h2>
-          <p className="mt-2 text-gray-600">Tailwind utilities make responsive design effortless.</p>
-        </div>
-      </section>
-      <footer className="mt-16 text-sm text-gray-500">Template by BiteSite</footer>
-    </main>
-  )
-}
+import { Button } from "@/components/ui/button";
 
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center animate-fade-in-up">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+            Welcome to Your
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              {' '}Modern Landing Page
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Build beautiful, responsive landing pages with ease. Powered by React, Tailwind, and Vite.
+          </p>
+          <div className="flex gap-4 justify-center animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              Get Started
+            </Button>
+            <Button size="lg" variant="outline">
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Index;
